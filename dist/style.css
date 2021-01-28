@@ -1,0 +1,87 @@
+.fsz28 {
+  font-size: 28px; }
+
+.fsz24 {
+  font-size: 24px; }
+
+.fsz18 {
+  font-size: 18px; }
+
+.fsz16 {
+  font-size: 16px; }
+
+.intro {
+  background-color: #4b83a6;
+  color: #fff; }
+  .intro__header {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 15px 20px;
+    height: 113px; }
+  .intro__icon {
+    position: absolute;
+    top: 15px;
+    left: -10px;
+    z-index: 10; }
+  .intro__name {
+    text-align: center; }
+    .intro__name span {
+      position: relative;
+      line-height: 21px;
+      z-index: 10; }
+      .intro__name span:last-child {
+        font-family: serif; }
+  .intro__tel {
+    text-decoration: none;
+    color: #fff !important; }
+  .intro__decor {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 300px;
+    height: 113px;
+    background: radial-gradient(circle, #6b99b6, #4b83a6);
+    z-index: 1; }
+
+.tab {
+  background-color: #fff; }
+  .tab__panel {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 540px;
+    min-height: 43px; }
+  .tab__item {
+    position: relative;
+    line-height: 21px;
+    font-weight: 400;
+    color: #3a5362; }
+    .tab__item_active {
+      color: #fff; }
+      .tab__item_active span {
+        position: relative;
+        z-index: 100; }
+    .tab__item_img {
+      position: absolute;
+      top: -5px;
+      right: -18px;
+      z-index: 1; }
+  .tab__sign {
+    line-height: 21px;
+    font-weight: 400;
+    color: #3a5362; }
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0; }
+
+html {
+  font-family: 'Open Sans', 'Roboto', sans-serif; }
+
+.container {
+  width: 1280px;
+  margin: 0 auto;
+  padding: 0 140px; }

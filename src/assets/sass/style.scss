@@ -1,0 +1,28 @@
+@import './components/variables';
+@import './components/sizes';
+@import './components/fonts';
+@import './screens/first.scss';
+@import './screens/tab';
+
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-family: 'Open Sans', 'Roboto', sans-serif;
+}
+
+.container {
+    width: 1280px;
+    margin: 0 auto;
+    padding: 0 140px;
+}
+
+
+
+
+

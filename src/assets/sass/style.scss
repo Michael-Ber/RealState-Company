@@ -1,8 +1,10 @@
 @import './components/variables';
 @import './components/sizes';
 @import './components/fonts';
-@import './screens/first.scss';
-@import './screens/tab';
+@import './screens/first/first.scss';
+@import './screens/first/tab';
+@import './screens/first/carousel';
+@import './screens/second/second';
 
 
 

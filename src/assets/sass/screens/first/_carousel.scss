@@ -1,0 +1,64 @@
+.intro__carousel {
+    &_wrapper {
+        overflow: hidden;
+        width: 508px;
+        height: 340px;
+        background-color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    &_item {
+        display: flex;
+        align-items: center;
+        &_wrapper {
+            width: 489px;
+        }
+        &_text {
+            background-color: #1a425a;
+            padding-left: 26px;
+            #text1 {
+                font-size: 20px;
+                line-height: 34px;
+                font-weight: 400;
+                color: #ffffff;
+            }
+            #text2 {
+                font-size: 14px;
+                line-height: 34px;
+                font-weight: 400;
+                color: #ffffff;
+            }
+        }
+        &_box {
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+        &_img {
+            height: 253px;
+        }
+    }
+    &_film {
+        display: flex;
+    }
+    &_dots {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 12px;
+    }
+    &_dot {
+        width: 10px;
+        height: 10px;
+        border-radius: 100%;
+        background-color: #fff;
+        margin-right: 8px;
+        cursor: pointer;
+        &_active {
+            background-color: #2c5f7f;
+        }
+    }
+}

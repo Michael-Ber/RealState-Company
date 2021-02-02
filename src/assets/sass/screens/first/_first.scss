@@ -42,3 +42,12 @@
     }
     
 }
+.bg_first {
+    width: 100%;
+    height: 398px;
+    background: url('../../assets/img/fs/banner_bg.jpg') center (center/cover) no-repeat;
+    position: absolute;
+    top: 159px;
+    left: 0;
+    z-index: 1;
+}

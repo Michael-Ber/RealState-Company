@@ -1,0 +1,21 @@
+.fourth {
+    padding: 12px 0; 
+    background-color: $main-color;
+    &__forms {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .form__login {
+            padding: 26px 15px;
+            .form__data {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+            &_name, &_passw {
+                padding: 10px;
+                border-radius: 10px;
+            }
+        }
+    }
+}

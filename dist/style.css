@@ -310,6 +310,23 @@
       height: 100%;
       object-fit: cover; }
 
+.fourth {
+  padding: 12px 0;
+  background-color: #4b83a6; }
+  .fourth__forms {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+    .fourth__forms .form__login {
+      padding: 26px 15px; }
+      .fourth__forms .form__login .form__data {
+        display: flex;
+        justify-content: space-between;
+        align-items: center; }
+      .fourth__forms .form__login_name, .fourth__forms .form__login_passw {
+        padding: 10px;
+        border-radius: 10px; }
+
 * {
   box-sizing: border-box;
   margin: 0;

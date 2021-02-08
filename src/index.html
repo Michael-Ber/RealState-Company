@@ -10,7 +10,7 @@
 <body>
     <section class="intro">
         <div class="container">
-            <div class="intro__header">
+            <header class="intro__header">
                 <div class="intro__name">
                     <div class="intro__icon">
                         <img src="./assets/icons/logo.png" alt="logo">
@@ -20,9 +20,7 @@
                     <div class="intro__decor"></div>
                 </div>
                 <a href="#" class="intro__tel fsz24">Call us: (214) 227-7669</a>
-            </div>
-
-            
+            </header>
         </div>
         <div class="tab">
             <div class="container">
@@ -123,6 +121,7 @@
             </div>
         </div>
     </section>
+
     <div class="bg_first">
     </div>
 
@@ -243,9 +242,89 @@
 
     <section class="fourth">
         <div class="container">
-
+            <div class="fourth__forms">
+                <form action="server.php" name="login" class="form__login">
+                    <span class="form__title">Member login</span>
+                    <div class="form__data">
+                        <input type="text" name="name" placeholder="User name" class="form__login_name">
+                        <input type="text" name="passw" placeholder="Password" class="form__login_passw">
+                        <button type="submit" class="form__login_submit">Login</button>
+                    </div>
+                </form>
+                <form action="server.php" name="form__subscribe" class="form__subscribe">
+                    <span class="form__title">Subscribe to our weekly newsletter</span>
+                    <div class="form__data">
+                        <input type="email" name="email" placeholder="email address" class="form__subscribe_email">
+                        <button type="submit" class="form__login_submit">Subscribe</button>
+                    </div>
+                </form>
+            </div>
+            <div class="fourth__subscript">
+                <div class="fourth__member">
+                    <span>Not a member yet</span>
+                    <div class="triangle"></div>
+                </div>
+                <div class="fourth__signup">
+                    <span>Signup Now</span>
+                </div>
+                <div class="fourth__socials">
+                    <img src="./assets/img/facebook.png" alt="facebook" class="fourth__socials_item">
+                    <img src="./assets/img/twitter.png" alt="twitter" class="fourth__socials_item">
+                    <img src="./assets/img/google.png" alt="google" class="fourth__socials_item">
+                </div>
+            </div>
         </div>
     </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__wrapper">
+                <div class="footer__item">
+                    <div class="footer__item_title">About Us</div>
+                    <div class="footer__item_links">
+                        <a href="#">About us</a>
+                        <a href="#">Why us</a>
+                        <a href="#">Customer Stories</a>
+                        <a href="#">Press Resources</a>
+                        <a href="#">Press Releases</a>
+                        <a href="#">Contact us</a>
+                    </div>
+                </div>
+                <div class="footer__item">
+                    <div class="footer__item_title">Proparties</div>
+                    <div class="footer__item_links">
+                        <a href="#">Rent a home</a>
+                        <a href="#">Lease a home</a>
+                        <a href="#">Buy a home</a>
+                        <a href="#">Sell a home</a>
+                        <a href="#">Ask advices</a>
+                    </div>
+                </div>
+                <div class="footer__item">
+                    <div class="footer__item_title">Costamer Testimonials</div>
+                    <div class="footer__item_text">
+                        Lorem Ipsum is simply dummy text of the printing and 
+                        typesetting industry. Lorem Ipsum has been the industr
+                        standard dummy text ever since the 1500s, 
+                        when an unknown printer took a
+                    </div>
+                    <div class="footer__item_footer">
+                        Lorem Ipsum is simply <br>
+                        Owner, Lorem Ipsum
+                    </div>
+                </div>
+                <div class="footer__item">
+                    <div class="footer__item_logo">
+                        <img src="./assets/icons/logo.png" alt="logo" class="footer__logo">
+                        <span>Realstate company</span>
+                    </div>
+                    <div class="footer__item_copyright">
+                        <a href="#">© cssauthor.com</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
 
     <script src = "script.js"></script>
 </body>

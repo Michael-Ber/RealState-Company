@@ -3,19 +3,141 @@
     background-color: $main-color;
     &__forms {
         display: flex;
-        justify-content: space-between;
+        justify-content: flex-start;
         align-items: center;
-        .form__login {
-            padding: 26px 15px;
+        .form__login, .form__subscribe {
+            width: 472px;
+            padding: 26px;
+            border: 1px solid #d7d7d7;
+            border-radius: 10px;
+            background-image: linear-gradient(0.0deg, #679abb 0%, #82bbdf 100%);
             .form__data {
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
             }
             &_name, &_passw {
-                padding: 10px;
+                width: 150px;
+                padding: 10px 0 10px 10px;
+                border: 0;
                 border-radius: 10px;
+                margin-right: 15px;
+                font-size: 16px;
+                line-height: 21px;
+                font-weight: 400;
+                color: #4b7d9b;
+                &::placeholder {
+                    color: #4b7d9b;
+                }
+            }
+            &_submit {
+                width: 95px;
+                padding: 8px;
+                background-image: linear-gradient(0.0deg, #498ab2 0%, #6bb2dd 100%);
+                border: 3px solid #d7d7d7;
+                border-radius: 10px;
+                cursor: pointer;
+                font-size: 16px;
+                line-height: 21px;
+                font-weight: 400;
+                color: #ffffff;
+                &:hover {
+                    background-image: linear-gradient(0.0deg, #154b6d 0%, #375c74 100%);
+                }
+            }
+        }
+        .form__title {
+            display: block;
+            margin-bottom: 18px;
+            font-size: 24px;
+            line-height: 21px;
+            font-weight: 400;
+            color: #ffffff;
+        }
+        .form__subscribe {
+            margin-left: 25px;
+            &_email {
+                width: 310px;
+                padding: 10px 0 10px 10px;
+                border: 0;
+                border-radius: 10px;
+                margin-right: 15px;
+                font-size: 16px;
+                line-height: 21px;
+                font-weight: 400;
+                color: #4b7d9b;
+                &::placeholder {
+                    color: #4b7d9b;
+                }
+            }
+        }
+    }
+    &__subscript {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-end;
+        position: relative;
+    }
+    &__member {
+        position: relative;
+        width: 300px;
+        padding: 15px 50px;
+        z-index: 10;
+        background-image: linear-gradient(0.0deg, #679abb 0%, #82bbdf 100%);
+        border: 1px solid #d7d7d7;
+        font-size: 22px;
+        line-height: 21px;
+        font-weight: 400;
+        color: #ffffff;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+        border-top-right-radius: 2px;
+        border-bottom-right-radius: 2px;
+        margin-top: 10px;
+        .triangle {
+            position: absolute;
+            height: 37px;
+            width: 37px;
+            background: linear-gradient(39deg, #679abb 0%, #82bbdf 100%);
+            transform: rotate(-45deg);
+            left: 280px;
+            top: 7px;
+            border-right: 1px solid #d7d7d7;
+            border-bottom: 1px solid #d7d7d7;
+        }
+    }
+    &__signup {
+        width: 225px;
+        position: absolute;
+        right: 527px;
+        top: 10px;
+        z-index: 1;
+        padding: 15px 50px;
+        background-image: linear-gradient(0.0deg, #ff6e02 0%, #ffa765 100%);
+        border: 1px solid #ffffff;
+        font-size: 22px;
+        line-height: 21px;
+        font-weight: 400;
+        color: #ffffff;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+        cursor: pointer;
+        span {
+            display: block;
+            text-align: right;
+            width: 170px;
+            padding-right: 10px;
+        }
+    }
+    &__socials {
+        display: flex;
+        align-items: flex-end;
+        margin-left: 200px;
+        &_item {
+            & + & {
+                margin-left: 10px;
             }
         }
     }
 }
+

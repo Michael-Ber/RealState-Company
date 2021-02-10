@@ -96,13 +96,75 @@
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_tabs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/tabs */ "./src/assets/js/modules/tabs.js");
+/* harmony import */ var _modules_carousel__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/carousel */ "./src/assets/js/modules/carousel.js");
+
 
 window.addEventListener('DOMContentLoaded', () => {
   const mainTab = new _modules_tabs__WEBPACK_IMPORTED_MODULE_0__["default"]('.tab__item', '.tab__content', 'tab__item_active', 'tab__content_active', '.tab__item_img');
   mainTab.init();
   const slaveTab = new _modules_tabs__WEBPACK_IMPORTED_MODULE_0__["default"]('.box', '.tab__inner_content', 'box_active', 'tab__inner_content_active');
   slaveTab.init();
+  const carousel = new _modules_carousel__WEBPACK_IMPORTED_MODULE_1__["default"]('.intro__carousel_film', '.intro__carousel_item', 'intro__carousel_item_active', '.intro__carousel_dot', 'intro__carousel_dot_active');
+  carousel.init();
 });
+
+/***/ }),
+
+/***/ "./src/assets/js/modules/carousel.js":
+/*!*******************************************!*\
+  !*** ./src/assets/js/modules/carousel.js ***!
+  \*******************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Carousel; });
+class Carousel {
+  constructor(wrapper, items, itemActive, dots, dotActive) {
+    this.wrapper = document.querySelector(wrapper);
+    this.items = document.querySelectorAll(items);
+    this.itemActive = itemActive;
+    this.dots = document.querySelectorAll(dots);
+    this.dotActive = dotActive;
+    this.filmLength = +window.getComputedStyle(this.wrapper).width.slice(0, -2);
+    this.slideLength = +window.getComputedStyle(this.items[0]).width.slice(0, -2);
+    this.offset = 0;
+    this.slideIndex = 2;
+  }
+
+  removeDotActive() {
+    this.dots.forEach(dot => {
+      dot.classList.remove(this.dotActive);
+    });
+  }
+
+  addDotActive(i) {
+    this.dots[i].classList.add(this.dotActive);
+  }
+
+  bindTriggers() {
+    this.dots.forEach((dot, i) => {
+      dot.addEventListener('click', () => {
+        this.moveToDot(i);
+        this.slideIndex = i;
+        this.removeDotActive();
+        this.addDotActive(i);
+      });
+    });
+  }
+
+  moveToDot(i) {
+    this.offset = this.slideLength * i;
+    this.wrapper.style.transform = `translateX(-${this.offset}px)`;
+  }
+
+  init() {
+    this.moveToDot(this.slideIndex);
+    this.bindTriggers();
+  }
+
+}
 
 /***/ }),
 

@@ -77,7 +77,8 @@
     font-weight: 400;
     color: #3a5362;
     z-index: 100;
-    transition: all .5s; }
+    transition: all .5s;
+    cursor: pointer; }
     .tab__item span {
       position: relative;
       z-index: 100; }
@@ -200,12 +201,12 @@
 
 .intro__carousel_wrapper {
   overflow: hidden;
-  width: 508px;
+  width: 489px;
   height: 340px;
   background-color: #fff;
   display: flex;
   align-items: center;
-  justify-content: center; }
+  justify-content: flex-start; }
 
 .intro__carousel_item {
   display: flex;
@@ -215,25 +216,31 @@
   .intro__carousel_item_text {
     background-color: #1a425a;
     padding-left: 26px; }
-    .intro__carousel_item_text #text1 {
-      font-size: 20px;
-      line-height: 34px;
-      font-weight: 400;
-      color: #ffffff; }
-    .intro__carousel_item_text #text2 {
-      font-size: 14px;
-      line-height: 34px;
-      font-weight: 400;
-      color: #ffffff; }
-  .intro__carousel_item_box img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; }
+  .intro__carousel_item_text1 {
+    display: block;
+    font-size: 20px;
+    line-height: 34px;
+    font-weight: 400;
+    color: #ffffff; }
+  .intro__carousel_item_text2 {
+    display: block;
+    font-size: 14px;
+    line-height: 34px;
+    font-weight: 400;
+    color: #ffffff; }
+  .intro__carousel_item_box {
+    width: 97%;
+    margin: 0 auto; }
+    .intro__carousel_item_box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; }
   .intro__carousel_item_img {
     height: 253px; }
 
 .intro__carousel_film {
-  display: flex; }
+  display: flex;
+  transition: all .3s; }
 
 .intro__carousel_dots {
   display: flex;
@@ -247,6 +254,7 @@
   border-radius: 100%;
   background-color: #fff;
   margin-right: 8px;
+  transition: all .3s;
   cursor: pointer; }
   .intro__carousel_dot_active {
     background-color: #2c5f7f; }

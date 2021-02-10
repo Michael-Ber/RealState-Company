@@ -24,12 +24,12 @@
         color: #3a5362;
         z-index: 100;
         transition: all .5s;
+        cursor: pointer;
         span {
             position: relative;
             z-index: 100;
         }
         &_active {
-            // width: 100px;
             color: #fff;
         }   
         &_img {

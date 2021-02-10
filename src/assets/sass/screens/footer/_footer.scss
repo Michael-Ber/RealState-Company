@@ -52,15 +52,25 @@
         &_logo {
             position: relative;
             font-size: 17px;
-            line-height: 12px;
+            line-height: 45px;
             font-weight: 400;
             color: #ffffff;
+        }
+        &_copyright {
+            a {
+                font-size: 13px;
+                line-height: 22px;
+                font-weight: 400;
+                color: rgba(255, 255, 255, .8);
+                text-decoration: none;
+            }
+            
         }
     }
     &__logo {
         position: absolute;
         top: 0;
-        left: 0;
+        left: -17px;
         width: 30px;
     }
     

@@ -1,3 +1,4 @@
+
 @import './components/variables';
 @import './components/sizes';
 @import './components/fonts';
@@ -8,6 +9,7 @@
 @import './screens/third/third';
 @import './screens/fourth/fourth';
 @import './screens/footer/footer';
+
 
 
 * {
@@ -27,6 +29,6 @@ html {
 }
 
 
-
+@import './adaptation/media';
 
 

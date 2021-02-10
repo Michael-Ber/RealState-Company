@@ -57,6 +57,8 @@
 
 .tab {
   background-color: #fff; }
+  .tab__burger {
+    display: none; }
   .tab__panel {
     display: flex;
     justify-content: space-between;
@@ -67,13 +69,15 @@
     .tab__panel_items {
       display: flex;
       width: 530px;
-      justify-content: space-between; }
+      justify-content: space-between;
+      position: relative; }
   .tab__item {
     position: relative;
     line-height: 21px;
     font-weight: 400;
     color: #3a5362;
-    z-index: 100; }
+    z-index: 100;
+    transition: all .5s; }
     .tab__item span {
       position: relative;
       z-index: 100; }
@@ -82,8 +86,8 @@
     .tab__item_img {
       position: absolute;
       top: -5px;
-      right: -18px;
-      z-index: 1; }
+      left: 85px;
+      z-index: 100; }
   .tab__sign {
     line-height: 21px;
     font-weight: 400;
@@ -92,7 +96,8 @@
     display: none;
     position: relative;
     z-index: 100;
-    width: 508px; }
+    width: 508px;
+    transition: all .5s; }
     .tab__content_active {
       display: block; }
     .tab__content_wrapper {
@@ -475,13 +480,19 @@
   .footer__item_logo {
     position: relative;
     font-size: 17px;
-    line-height: 12px;
+    line-height: 45px;
     font-weight: 400;
     color: #ffffff; }
+  .footer__item_copyright a {
+    font-size: 13px;
+    line-height: 22px;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none; }
   .footer__logo {
     position: absolute;
     top: 0;
-    left: 0;
+    left: -17px;
     width: 30px; }
 
 * {
@@ -496,3 +507,299 @@ html {
   width: 1280px;
   margin: 0 auto;
   padding: 0 140px; }
+
+@media (max-width: 1199px) {
+  .container {
+    max-width: 960px;
+    padding: 0 70px; }
+  .tab__content {
+    width: 384px; }
+    .tab__content_wrapper_right {
+      margin-left: 10px; }
+  .intro__carousel_wrapper {
+    width: 354px;
+    height: 345px; }
+  .intro__carousel_item_wrapper {
+    width: 335px; }
+  .intro__carousel_item_img {
+    height: 200px; }
+  .intro__carousel_item_text {
+    padding-left: 8px; }
+  .intro__carousel #text1 {
+    display: block;
+    text-align: center;
+    font-size: 17px;
+    line-height: 29px; }
+  .intro__carousel #text2 {
+    display: block;
+    text-align: center;
+    font-size: 14px;
+    line-height: 34px; }
+  .second__info_column {
+    width: 250px; }
+  .third__content {
+    justify-content: center; }
+  .third__item {
+    margin-bottom: 20px;
+    margin-left: 20px; }
+    .third__item:first-child {
+      margin-left: 0; }
+    .third__item:nth-child(4n) {
+      margin-left: 0; }
+    .third__item:nth-child(5n) {
+      margin-left: 20px; }
+    .third__item:nth-child(7) {
+      margin-left: 0; }
+    .third__item:last-child {
+      margin-left: 20px; }
+  .fourth__forms {
+    justify-content: flex-start;
+    align-items: flex-start; }
+  .fourth .form__login {
+    width: 435px; }
+    .fourth .form__login_name, .fourth .form__login_passw {
+      width: 100%;
+      margin-right: 0;
+      margin-bottom: 15px; }
+    .fourth .form__login_submit {
+      width: 155px; }
+  .fourth .form__subscribe {
+    width: 435px;
+    margin-left: 25px; }
+    .fourth .form__subscribe_email {
+      margin-right: 0;
+      margin-bottom: 70px; }
+  .fourth .form__title {
+    font-size: 20px; }
+  .fourth .form__data {
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column; }
+  .fourth__member {
+    width: 238px; }
+    .fourth__member span {
+      font-size: 16px;
+      line-height: 16px; }
+    .fourth__member .triangle {
+      left: 218px;
+      top: 7px; }
+  .fourth__signup {
+    width: 156px;
+    right: 439px;
+    font-size: 16px; }
+    .fourth__signup span {
+      width: 100px; }
+  .footer__item:last-child {
+    text-align: center; }
+  .footer__logo {
+    left: 8px; } }
+
+@media (max-width: 991px) {
+  .container {
+    max-width: 720px;
+    padding: 0 7px; }
+  .bg_first {
+    height: 390px; }
+  .tab__content {
+    width: 354px; }
+  .tab__inner_panel_item .box {
+    width: 140px; }
+    .tab__inner_panel_item .box span {
+      font-size: 20px; }
+  .tab__inner_content {
+    padding: 20px 20px;
+    width: 328px; }
+  .tab__inner_input {
+    width: 286px;
+    font-size: 14px; }
+  .tab__inner_labels {
+    font-size: 14px; }
+  .tab__inner_temp {
+    align-items: flex-start; }
+    .tab__inner_temp:nth-child(2) {
+      margin-left: 24px; }
+  .tab__inner_title {
+    font-size: 15px; }
+  .tab__inner_selects {
+    width: 174px; }
+  .second__info_column + .second__info_column {
+    margin-left: 20px; }
+  .fourth .form__login, .fourth .form__subscribe {
+    width: 340px; }
+  .fourth .form__title {
+    font-size: 17px; }
+  .fourth__member {
+    width: 191px;
+    padding: 15px 22px;
+    font-size: unset; }
+    .fourth__member span {
+      font-size: 16px; }
+    .fourth__member .triangle {
+      left: 171px; }
+  .fourth__signup {
+    width: 156px;
+    right: 366px; } }
+
+@media (max-width: 767px) {
+  .container {
+    max-width: 540px; }
+  .bg_first {
+    height: 817px; }
+  .intro__icon {
+    top: 18px;
+    left: -7px; }
+  .intro__name span:nth-of-type(2) {
+    font-size: 16px; }
+  .intro__decor {
+    width: 245px; }
+  .intro__tel {
+    font-size: 16px; }
+  .tab__panel_items {
+    width: 360px; }
+  .tab__item_img {
+    width: 106px; }
+  .tab__content_wrapper {
+    flex-direction: column;
+    align-items: center; }
+    .tab__content_wrapper_left, .tab__content_wrapper_right {
+      margin-bottom: 30px; }
+  .second__info {
+    justify-content: unset;
+    align-items: center;
+    flex-direction: column; }
+    .second__info_column {
+      width: 80%;
+      margin-bottom: 20px; }
+      .second__info_column + .second__info_column {
+        margin-left: unset; }
+    .second__info_logo {
+      width: 175px;
+      margin: 0 auto; }
+  .third__item {
+    margin-left: unset; }
+    .third__item:nth-child(2n) {
+      margin-left: 20px; }
+    .third__item:nth-child(5) {
+      margin-left: unset; }
+  .fourth__forms {
+    flex-direction: column;
+    align-items: center; }
+  .fourth .form__subscribe, .fourth .form__login {
+    margin-left: 0;
+    margin-bottom: 20px; }
+  .fourth .form__subscribe_email {
+    margin-bottom: 15px; }
+  .fourth__member {
+    width: 191px; }
+  .fourth__signup {
+    right: 197px; }
+    .fourth__signup span {
+      width: 105px; }
+  .fourth__socials {
+    margin-left: 155px; }
+  .footer__item + .footer__item {
+    margin-left: 20px; } }
+
+@media (max-width: 575px) {
+  .container {
+    max-width: 100%; }
+  .bg_first {
+    top: 140px;
+    height: 661px; }
+  .intro__header {
+    align-items: center;
+    justify-content: flex-end; }
+  .intro__icon {
+    left: 25px; }
+  .intro__name span:nth-of-type(1) {
+    font-size: 24px; }
+  .intro__name span:nth-of-type(2) {
+    display: none; }
+  .intro__tel {
+    display: none; }
+  .intro__carousel_wrapper {
+    width: 300px;
+    height: 271px; }
+  .intro__carousel_item_wrapper {
+    width: 300px; }
+  .intro__carousel_item_img {
+    height: 173px; }
+  .intro__carousel_item_text {
+    padding-left: unset;
+    padding: 5px 5px; }
+    .intro__carousel_item_text #text1 {
+      font-size: 16px; }
+  .intro__carousel_dots {
+    display: none; }
+  .tab__burger {
+    display: block;
+    padding: 8px 10px; }
+    .tab__burger_line {
+      display: block;
+      width: 20px;
+      height: 2px;
+      background-color: #000; }
+      .tab__burger_line + .tab__burger_line {
+        margin-top: 5px; }
+  .tab__panel {
+    display: none; }
+  .tab__content {
+    width: 300px; }
+  .tab__inner_content {
+    padding: 10px 10px;
+    width: 300px; }
+  .tab__inner_title {
+    font-size: 14px; }
+  .tab__inner_input {
+    font-size: 13px;
+    width: 286px; }
+  .tab__inner_selects {
+    width: 150px; }
+  .tab__inner_temp div:last-of-type {
+    margin-left: 24px; }
+  .tab__inner_button {
+    align-self: center; }
+  .third__item:nth-child(n) {
+    margin-left: 0; }
+  .fourth .form__login, .fourth .form__subscribe {
+    width: 300px; }
+  .fourth .form__title {
+    font-size: 15px; }
+  .fourth .form__subscribe_email {
+    width: 236px; }
+  .fourth__subscript {
+    display: block; }
+  .fourth__member {
+    width: 175px; }
+    .fourth__member span {
+      font-size: 14px; }
+    .fourth__member .triangle {
+      left: 154px; }
+  .fourth__signup {
+    width: 131px;
+    right: 3px;
+    top: 0;
+    padding: 15px 38px; }
+    .fourth__signup span {
+      width: 89px;
+      font-size: 14px; }
+  .fourth__socials {
+    margin-left: 62px;
+    margin-top: 20px; }
+  .footer__wrapper {
+    justify-content: center;
+    flex-wrap: wrap; }
+  .footer__item:first-child {
+    flex: 0 119px; }
+  .footer__item:nth-child(2) {
+    flex: 0 99px;
+    margin-left: 0; }
+  .footer__item:nth-child(3) {
+    flex: 0 218px;
+    margin-left: 0; }
+  .footer__item:last-child {
+    margin-top: 10px; }
+  .footer__item_copyright {
+    margin-right: 25px; }
+  .footer__logo {
+    left: 47px; } }

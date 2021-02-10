@@ -90,10 +90,75 @@
 /*!*******************************!*\
   !*** ./src/assets/js/main.js ***!
   \*******************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-console.log("hello");
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _modules_tabs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/tabs */ "./src/assets/js/modules/tabs.js");
+
+window.addEventListener('DOMContentLoaded', () => {
+  const mainTab = new _modules_tabs__WEBPACK_IMPORTED_MODULE_0__["default"]('.tab__item', '.tab__content', 'tab__item_active', 'tab__content_active', '.tab__item_img');
+  mainTab.init();
+  const slaveTab = new _modules_tabs__WEBPACK_IMPORTED_MODULE_0__["default"]('.box', '.tab__inner_content', 'box_active', 'tab__inner_content_active');
+  slaveTab.init();
+});
+
+/***/ }),
+
+/***/ "./src/assets/js/modules/tabs.js":
+/*!***************************************!*\
+  !*** ./src/assets/js/modules/tabs.js ***!
+  \***************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Tabs; });
+class Tabs {
+  constructor(items, content, itemActiveClass, contentActiveClass, img) {
+    this.item = document.querySelectorAll(items);
+    this.content = document.querySelectorAll(content);
+    this.itemActiveClass = itemActiveClass;
+    this.contentActiveClass = contentActiveClass;
+    this.img = document.querySelector(img);
+  }
+
+  removeActive() {
+    this.item.forEach(item => {
+      item.classList.remove(this.itemActiveClass);
+    });
+    this.content.forEach(content => {
+      content.classList.remove(this.contentActiveClass);
+    });
+  }
+
+  addActive(element, activeClass) {
+    element.classList.add(activeClass);
+  }
+
+  bindTriggers() {
+    this.item.forEach((item, i) => {
+      item.addEventListener('click', () => {
+        this.removeActive();
+        this.addActive(item, this.itemActiveClass);
+        this.addActive(this.content[i], this.contentActiveClass);
+
+        if (this.img) {
+          let distance = +item.getAttribute('data-tab');
+          this.img.style.left = distance + 'px';
+          this.img.style.transition = 'all .5s';
+        }
+      });
+    });
+  }
+
+  init() {
+    this.bindTriggers();
+  }
+
+}
 
 /***/ })
 

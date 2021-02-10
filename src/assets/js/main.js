@@ -1,5 +1,6 @@
 import Tabs from './modules/tabs';
 import Carousel from './modules/carousel';
+import Form from './modules/form';
 
 window.addEventListener('DOMContentLoaded', () => {
     const mainTab = new Tabs('.tab__item', '.tab__content', 'tab__item_active', 'tab__content_active', '.tab__item_img');
@@ -9,6 +10,11 @@ window.addEventListener('DOMContentLoaded', () => {
     slaveTab.init();
 
     const carousel = new Carousel('.intro__carousel_film', '.intro__carousel_item', 'intro__carousel_item_active', '.intro__carousel_dot', 'intro__carousel_dot_active');
-
     carousel.init();
+
+    const form1 = new Form('.form__login', 'input');
+    form1.init();
+
+    const form2 = new Form('.form__subscribe', 'input');
+    form2.init();
 });

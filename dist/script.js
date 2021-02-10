@@ -97,6 +97,8 @@
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_tabs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/tabs */ "./src/assets/js/modules/tabs.js");
 /* harmony import */ var _modules_carousel__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/carousel */ "./src/assets/js/modules/carousel.js");
+/* harmony import */ var _modules_form__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/form */ "./src/assets/js/modules/form.js");
+
 
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -106,6 +108,10 @@ window.addEventListener('DOMContentLoaded', () => {
   slaveTab.init();
   const carousel = new _modules_carousel__WEBPACK_IMPORTED_MODULE_1__["default"]('.intro__carousel_film', '.intro__carousel_item', 'intro__carousel_item_active', '.intro__carousel_dot', 'intro__carousel_dot_active');
   carousel.init();
+  const form1 = new _modules_form__WEBPACK_IMPORTED_MODULE_2__["default"]('.form__login', 'input');
+  form1.init();
+  const form2 = new _modules_form__WEBPACK_IMPORTED_MODULE_2__["default"]('.form__subscribe', 'input');
+  form2.init();
 });
 
 /***/ }),
@@ -162,6 +168,54 @@ class Carousel {
   init() {
     this.moveToDot(this.slideIndex);
     this.bindTriggers();
+  }
+
+}
+
+/***/ }),
+
+/***/ "./src/assets/js/modules/form.js":
+/*!***************************************!*\
+  !*** ./src/assets/js/modules/form.js ***!
+  \***************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Form; });
+class Form {
+  constructor(selector, inputs) {
+    this.form = document.querySelector(selector);
+    this.inputs = this.form.querySelectorAll(inputs);
+  }
+
+  setRequiredFields() {
+    console.log(this.inputs);
+    this.inputs.forEach(input => {
+      input.setAttribute('required', true);
+    });
+  }
+
+  sendForm() {
+    this.form.addEventListener('submit', e => {
+      e.preventDefault();
+      let formData = new FormData(this.form);
+      this.postData('./assets/server.php', formData).then(res => console.log(res)).catch(() => console.log('error'));
+    });
+  }
+
+  async postData(url, data) {
+    const res = await fetch(url, {
+      method: 'POST',
+      body: data
+    });
+    return await res.text();
+  }
+
+  init() {
+    this.setRequiredFields();
+    this.sendForm();
   }
 
 }

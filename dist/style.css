@@ -322,6 +322,8 @@
       width: 100%;
       height: 100%;
       object-fit: cover; }
+    .third__item_search {
+      cursor: pointer; }
 
 .fourth {
   padding: 12px 0;

@@ -1,6 +1,7 @@
 import Tabs from './modules/tabs';
 import Carousel from './modules/carousel';
 import Form from './modules/form';
+import Image from './modules/incImage';
 
 window.addEventListener('DOMContentLoaded', () => {
     const mainTab = new Tabs('.tab__item', '.tab__content', 'tab__item_active', 'tab__content_active', '.tab__item_img');
@@ -17,4 +18,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
     const form2 = new Form('.form__subscribe', 'input');
     form2.init();
+
+    const img = new Image('.third__item_search', '.third__item_img', '.third__item', 'body');
+    img.init();
 });
